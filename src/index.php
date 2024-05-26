@@ -13,7 +13,7 @@
     <body>
         <div class="container">
             <h1 align="center">CRUD OOP PHP</h1>
-                <a href="" class="btn btn-primary btn-sm">Tambah Data</a>
+                <a href="input.php" class="btn btn-primary btn-sm">Tambah Data</a>
             <table class="table mt-3" border="1">
                 <thead>
                     <tr>
