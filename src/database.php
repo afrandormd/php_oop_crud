@@ -20,7 +20,8 @@ class Database
     {
         $data = mysqli_query($this->connect, "SELECT * FROM user");
         $rows = mysqli_fetch_all($data, MYSQLI_ASSOC);
-        var_dump($rows); 
+
+        return $rows;
     }
 }
 ?>
