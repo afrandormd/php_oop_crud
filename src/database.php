@@ -38,5 +38,9 @@ class Database
 
         return $rows;
     }
+
+    function update_data($id, $nama, $alamat, $nohp){
+        mysqli_query($this->connect, "UPDATE user SET nama = '$nama', alamat = '$alamat', nohp = '$nohp' WHERE user. id = '$id'");
+    }
 }
 ?>

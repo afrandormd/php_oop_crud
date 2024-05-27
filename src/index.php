@@ -13,7 +13,6 @@
     <body>
         <div class="container">
             <h1 align="center">CRUD OOP PHP</h1>
-                <a href="input.php" class="btn btn-primary btn-sm">Tambah Data</a>
             <table class="table mt-3" border="1">
                 <thead>
                     <tr>
@@ -26,22 +25,22 @@
                 </thead>
                 <tbody>
                     <?php
-                    $no = 1;
                     foreach ($db->tampil_data() as $siswa) {
                     ?>
                         <tr>
-                            <th scope="row"><?php echo $no++;?></th>
+                            <th scope="row"><?php echo $siswa['id']?></th>
                             <td><?php echo $siswa['nama'];?></td>
                             <td><?php echo $siswa['alamat'];?></td>
                             <td><?php echo $siswa['nohp'];?></td>
                             <td>
-                                <a href="" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="edit.php?id=<?php echo $siswa['id'];?>" class="btn btn-warning btn-sm">Edit</a>
                                 <a href="" class="btn btn-danger btn-sm">Hapus</a>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
+            <a href="input.php" class="btn btn-primary btn-sm">Tambah Data</a>
         </div>
     </body>
 
