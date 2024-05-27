@@ -23,5 +23,20 @@ class Database
 
         return $rows;
     }
+
+    // Fungsi untuk tambah data
+    function tambah_data($nama, $alamat, $nohp)
+    {
+        mysqli_query($this->connect, "INSERT INTO user (`id`, `nama`, `alamat`, `nohp`) VALUES (NULL, '$nama', '$alamat', '$nohp')");
+    }
+
+    // Fungsi untuk edit data
+    function edit_data($id)
+    {
+        $data = mysqli_query($this->connect, "SELECT * FROM user WHERE id='$id' ");
+        $rows = mysqli_fetch_all($data, MYSQLI_ASSOC);
+
+        return $rows;
+    }
 }
 ?>
