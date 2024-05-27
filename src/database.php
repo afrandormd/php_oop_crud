@@ -42,5 +42,11 @@ class Database
     function update_data($id, $nama, $alamat, $nohp){
         mysqli_query($this->connect, "UPDATE user SET nama = '$nama', alamat = '$alamat', nohp = '$nohp' WHERE user. id = '$id'");
     }
+
+    // Fungsi untuk hapus data
+    function delete_data($id)
+    {
+        mysqli_query($this->connect, "DELETE FROM user WHERE user. id = '$id' ");
+    }
 }
 ?>

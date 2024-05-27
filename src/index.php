@@ -34,7 +34,7 @@
                             <td><?php echo $siswa['nohp'];?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $siswa['id'];?>" class="btn btn-warning btn-sm">Edit</a>
-                                <a href="" class="btn btn-danger btn-sm">Hapus</a>
+                                <a href="proses.php?id=<?php echo $siswa['id'];?>&aksi=hapus" class="btn btn-danger btn-sm">Hapus</a>
                             </td>
                         </tr>
                     <?php } ?>
